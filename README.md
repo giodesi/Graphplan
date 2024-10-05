@@ -1,5 +1,6 @@
 
 WELCOME TO GRAPHPLAN
+
 Main Graphplan repository for Fundamentals of Artificial Intelligence course.
 
 
