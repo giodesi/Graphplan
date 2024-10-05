@@ -1,0 +1,27 @@
+(operator
+ LOAD
+ (params
+  (<object> CARGO) (<cart> CART) (<place> PLACE))
+ (preconds 
+  (at <cart> <place>)  (at <object> <place>))
+ (effects 
+  (on <object> <cart>) (del at <object> <place>)))
+
+(operator
+ UNLOAD
+ (params
+  (<object> CARGO) (<cart> CART) (<place>  PLACE))
+ (preconds 
+  (at <cart> <place>) (on <object> <cart>))
+ (effects 
+  (at <object> <place>) (del on <object> <cart>)))
+
+(operator
+ MOVE
+ (params
+  (<cart> CART) (<from> PLACE) (<to> PLACE))
+ (preconds 
+  (has-fuel <cart>) (at <cart> <from>))
+ (effects  
+  (at <cart> <to>) (del has-fuel <cart>) (del at <cart> <from>)))
+

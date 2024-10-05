@@ -1,0 +1,15 @@
+(home PLACE)
+(mushrooms PLACE)
+(car CART)
+(jack CARGO)
+(bobby CARGO)
+
+(preconds
+(at car home)
+(at jack home)
+(at bobby home)
+(has-fuel car))
+
+(effects
+(at jack mushrooms)
+(at bobby mushrooms))
